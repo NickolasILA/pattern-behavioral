@@ -10,7 +10,7 @@ public class ChainOfResponsibilityDemo {
         // do not knwo here who actually gonna handle it
         Handler handlerChain = buildChain();
 
-        Request request = new Request(RequestTypeE.CONFERENCE, 300);
+        Request request = new Request(RequestTypeE.CONFERENCE, 299);
         handlerChain.handleRequest(request);
 
         request.setAmount(599);
