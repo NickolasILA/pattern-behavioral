@@ -10,7 +10,6 @@ public class ExtendedBenefitApprover extends Handler {
 
     public Response handleRequest(Request request) {
         if (request.getType()==RequestTypeE.EXTENDED_BENEFIT ) {
-            System.out.println("Response decision was made by "+this.getClass());
             ResponseStatusE status = request.getAmount()<2500 ? ResponseStatusE.CONFIRMED : ResponseStatusE.DENIED;
             System.out.println("Response decision was made by "+this.getClass()+". Decision: "+status+". Request: "+request.toString());
             return new Response(status);
